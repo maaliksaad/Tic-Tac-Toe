@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* **************************NAVBAR************************** */
+
+nav{
+    background-color: rgb(37, 9, 37);
+    height: 65px;
+    color: white;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto','san-serif';
+} 
+
+
+nav li{
+    list-style-type: none;
+  
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.gameBoard{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto','san-serif';
+    position: relative;
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    cursor: pointer;
+}
+
+
+.box:hover{
+    background-color: rgb(242, 234, 250);
+    
+}
+
+.br{
+   border-bottom: 2px solid black;
+}
+
+.bc{
+    border-right: 2px solid black;
+}
+
+
+.scoreCard{
+    font-family: 'Baloo Bhaina 2', cursive;
+    margin: 0 34px;
+}
+
+.scoreCard h1{
+    font-size: 2.5rem
+}
+
+.gameInfo{
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+button{
+    background-color: #f3e7f9;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 1px 18px;
+    margin: 0 5px 23px 0;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+.imgbox img{
+     width: 0;
+     transition: width 1s ease-in-out;
+}
+
+.line{
+    width: 0;
+    height: 3px;
+    background-color: #911d91;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .scoreCard{
+        margin-top: 34px;
+    }
+    .scoreCard h1{
+        font-size: 1.5rem;
+    }
+    .gameBoard { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
+
